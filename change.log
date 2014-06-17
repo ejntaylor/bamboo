@@ -1,0 +1,218 @@
+Bamboo Lite Change Log
+======================
+
+
+
+1.2.8.4 - 10/06
+===============
+Made PrettyPhoto conditional on WooCommerce active
+Change login image so compatible with other login plugins
+
+1.2.8.3
+=======
+Multiple tweaks
+
+1.2.8.2
+=======
+Only show front end for user logged in.
+Added draggable to the front end item
+
+1.2.8.1
+=======
+Added option to show the clicked on link
+
+
+1.2.8
+=====
+Fully integrated with Bamboo Premium
+Updated Email in Site Info
+Templates added to Styles Debug in slideout
+
+
+1.2.7.5
+========
+Moving beta items to live
+
+
+1.2.7.4
+========
+Ivan updates
+
+
+1.2.7.3
+========
+
+Misc. Updates
+
+1.2.7.2 - 22/05
+===============
+
+Updates Header Output
+
+1.2.7 - 08/05
+==============
+
+Large Upgrade
+Upgraded JS Printout
+Info Tab
+Email (beta)
+
+In Dev 
+-------
+Integrated Required Plugins List (beta) with Simple Settings Class
+Domain Restriction added - not hooked into Settings
+
+
+1.2.6.4 - 29/04
+===============
+Added Stylesheet Toggle to all
+
+1.2.6.3 - 28/04
+===============
+
+Settings Added
+
+1.2.6.2 - 28/04
+==============
+Added Stylesheet Lister
+Upgraded sidebar slideout
+
+1.2.6.1 - 27/04
+==============
+Adds print funtion to hooks debug
+Adds dropdown to hook debug
+
+1.2.6 - 25/04
+=============
+Added Styles Toggle and Styles Debug
+
+1.2.5.2
+=======
+Debug Hooks Added
+Menu Sub Menus added
+Renamed constants
+
+
+1.2.5.1
+=======
+Adding Canvas detection
+Code tidy
+
+1.2.5
+======
+
+Added Debug Hooks
+Added Login redirect to front page for subscribers
+Dashboard can be overwritten by using templates folder
+Updated Bamboo Dash
+
+
+1.2.4.1
+========
+Added Canvas Page Title Fix
+
+
+1.2.4
+=====
+Multiple Updates
+- Deactivate Plugin
+- Menu
+- Core changes
+
+1.2.3 - 11/04/2014
+==================
+
+Added Plugin Update Screen in Dashboard
+Added Install Required Plugins section
+Created Child Theme Versioning
+New CSS structure for Child Themes > 1.1
+
+	canvas-inline					// From the outputted canvas backend settings
+	layout							// Layout structure
+	template-styles					// Base styling for the Styles Template
+	woocommerce						// WooCommerce Styling
+	templates						// Additional Template Styling
+	responsive-htabletplus			// Responsive - Horizontal Tablets and larger
+	responsive-vtabletless			// Responsive - Vertical Tablets and smaller
+	responsive-phones				// Responsive - Phones
+
+Updates to Admin Bar
+
+
+1.2.2 - 10/04/2014
+==================
+Added Admin Bar Support
+Moved Style Link to Admin Bar
+Added Tablet Width to responsive indicator
+
+
+1.2.1.1
+======
+
+Style Page - Minor Title amend
+ 
+
+1.2.1
+======
+
+Style Guide version 1.2
+Style Guide - Debug Bar Quick Link
+Style Guide - Auto Generate
+Style Guide - Backwards compatibility
+Style Guide - Removal of ACF - Pure CSS generation of colour scheme
+Remove Admin Bar CSS Pushdown
+Amend core-styles due to new admin bar css remove
+
+
+
+
+1.2.0.1
+======
+
+Style Guide update
+
+
+1.2.0
+======
+
+Added Templating to Core
+Added Style Guide as Template (Please note to change Style page to new Raison Style)
+
+1.1.9.1
+=====
+
+Flexslider first image CSS preloader
+
+1.1.9
+=====
+
+Bug-fix admin menu
+
+1.1.8
+=====
+
+
+Force Admin bar for logged in.
+Adds flexslider as default.
+
+
+1.1.6
+=====
+
+Added responsive media queries debug message - hidden when debug=false (eg. live site)
+
+
+1.1.5
+=====
+
+Added placeholder image for WooCommerce Products missing featured image
+
+1.1.4
+=====
+
+Removed image re-size as now plugin based.
+
+1.1.3
+======
+
+Added flex-custom and flex-slide.
