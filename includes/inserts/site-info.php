@@ -41,6 +41,8 @@ global $wp_version;
 
 <!-- HTML -->
 
+	<h3>Theme Info</h3>
+
 	<table id="site-info">
 		<tr>
 			<th></th>
@@ -108,6 +110,8 @@ $notavailable = 'Not Available';
 		}
 
 
+	echo '<h3>Site Info</h3>';
+
 
 echo '<table><tbody>';
 if ( WP_DEBUG ) { echo '<tr><td>Debug</td><td>Enabled - Site in Development <i class="fa fa-wrench"></i></td></tr>'; } else { echo '<tr><td>Debug</td><tr><i class="fa fa-globe"></i> WP Debug Not Enabled: Site Live</td></tr>'; }
@@ -126,5 +130,43 @@ echo '<tr><td>WP Memory Limit</td><td>' . WP_MEMORY_LIMIT . '</td></tr>';
 echo '</tbody></table>';
 
 ?>
+
+
+<h3>Image Sizes</h3>
+
+<?php
+
+ function list_thumbnail_sizes(){
+     global $_wp_additional_image_sizes;
+     	$sizes = array();
+ 		foreach( get_intermediate_image_sizes() as $s ){
+ 			$sizes[ $s ] = array( 0, 0 );
+ 			if( in_array( $s, array( 'thumbnail', 'medium', 'large' ) ) ){
+ 				$sizes[ $s ][0] = get_option( $s . '_size_w' );
+ 				$sizes[ $s ][1] = get_option( $s . '_size_h' );
+ 			}else{
+ 				if( isset( $_wp_additional_image_sizes ) && isset( $_wp_additional_image_sizes[ $s ] ) )
+ 					$sizes[ $s ] = array( $_wp_additional_image_sizes[ $s ]['width'], $_wp_additional_image_sizes[ $s ]['height'], );
+ 			}
+ 		}
+ 
+ 		echo '<table><tbody>';
+ 		foreach( $sizes as $size => $atts ){
+ 			echo '<tr><td>';
+ 			echo $size . '</td><td>' . implode( 'x', $atts ) . "\n";
+ 			echo '</td></tr>';
+ 			
+ 		}
+ 		echo '</table></tbody>';
+
+ }
+ 
+    
+    list_thumbnail_sizes();
+    
+    
+  
+  ?>
+
 
 <?php do_action('info_panel_items'); ?>

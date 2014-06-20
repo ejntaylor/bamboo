@@ -252,7 +252,6 @@ add_action('switch_menu_items_start','bb_info_div');
 function bb_info_div() { ?>
 
 			<div class="info">
-				<h3>Info</h3>
 				<?php require_once(BAMBOO_PLUGIN_DIR . '/includes/inserts/site-info.php'); ?>
 			</div> <!-- // JS Printout -->	
 			
