@@ -131,6 +131,8 @@ echo '</tbody></table>';
 
 ?>
 
+	<hr>
+
 
 <h3>Image Sizes</h3>
 
