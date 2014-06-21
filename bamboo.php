@@ -10,6 +10,8 @@
    License: GPL
    Copyright: Raison Online LTD.
    Text Domain: bamboo
+   GitHub Plugin URI: raisonon/bamboo
+   
    */
 
 
