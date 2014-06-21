@@ -42,11 +42,11 @@ public function plugin_setup()
  */
 public function rename_github_zip( $source, $remote_source, $thiz )
 {
-    if(  strpos( $source, 'github-plugin-for-wordpress') === false )
+    if(  strpos( $source, 'bamboo') === false )
         return $source;
 
     $path_parts = pathinfo( $source );
-    $newsource = trailingslashit( $path_parts['dirname'] ) . trailingslashit( 'github-plugin-for-wordpress' );
+    $newsource = trailingslashit( $path_parts['dirname'] ) . trailingslashit( 'bamboo' );
     rename( $source, $newsource );
     return $newsource;
 }
