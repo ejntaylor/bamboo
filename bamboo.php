@@ -19,39 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 
-/**
- * Access this plugin's working instance
- *
- * @wp-hook plugins_loaded
- * @return  object of this class
- */
-public function plugin_setup()
-{
-    add_filter( 'upgrader_source_selection', array( $this, 'rename_github_zip' ), 1, 3);
-}
-
-/**
- * Removes the prefix "-master" when updating from GitHub zip files
- * 
- * See: https://github.com/YahnisElsts/plugin-update-checker/issues/1
- * 
- * @param string $source
- * @param string $remote_source
- * @param object $thiz
- * @return string
- */
-public function rename_github_zip( $source, $remote_source, $thiz )
-{
-    if(  strpos( $source, 'bamboo') === false )
-        return $source;
-
-    $path_parts = pathinfo( $source );
-    $newsource = trailingslashit( $path_parts['dirname'] ) . trailingslashit( 'bamboo' );
-    rename( $source, $newsource );
-    return $newsource;
-}
-
-
 // set paths
 
 define('BAMBOO_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
