@@ -1,22 +1,33 @@
 <?php
+
+
+
+// redirect to Bamboo Dash on Login
+
+global $BambooPlugin;		
+if ( $BambooPlugin->get_setting('disable_dash_welcome') != "yes") {	
+	
+	function bb_dash_default() {
+	   return  admin_url( 'index.php?page=dashboard' );
+	  }
+	
+	add_filter('login_redirect', 'bb_dash_default');
+	
+
+}
+
+
 /*
 Version: 0.1
 Author: Remi Corson
 Author URI: http://remicorson.com
 
-*/
 
+Main Class
 
-
-
-/*
-|--------------------------------------------------------------------------
-| MAIN CLASS
-|--------------------------------------------------------------------------
 */
 
 class rc_sweet_custom_dashboard {
- 
 	/*--------------------------------------------*
 	 * Constructor
 	 *--------------------------------------------*/
@@ -38,17 +49,18 @@ class rc_sweet_custom_dashboard {
 			
 			if( $screen->base == 'dashboard' ) {
 
-				wp_redirect( admin_url( 'index.php?page=dashboard' ) );
+				//wp_redirect( admin_url( 'index.php?page=dashboard' ) );
 				
 			}
 		}
 
 	}
+
 	
 	
 	
 	function rc_scd_register_menu() {
-		add_dashboard_page( 'Your Dashboard', 'Your Dashboard', 'read', 'dashboard', array( &$this,'rc_scd_create_dashboard') );
+		add_dashboard_page( 'Welcome', 'Welcome', 'read', 'dashboard', array( &$this,'rc_scd_create_dashboard') );
 	}
 	
 	function rc_scd_create_dashboard() {

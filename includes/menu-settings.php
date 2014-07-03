@@ -27,6 +27,7 @@ echo '<p>Settings Have Been Reset</p><p><a href="'. admin_url( '/admin.php?page=
 		$BambooPlugin->update_setting('disable_flex', 'no');
 		$BambooPlugin->update_setting('disable_modernizr', 'no');
 		$BambooPlugin->update_setting('disable_fontawe', 'no');
+		$BambooPlugin->update_setting('disable_dash_welcome', 'no');
 
 
 
@@ -230,6 +231,20 @@ jQuery(document).ready(function($){
     	<table class="form-table">
 		<tbody>
 
+
+			<th colspan="2" ><h3>General</h3></th>
+
+
+			<tr>
+				<th scope="row" valign="top">Disable Welcome Dashboard on Login</th>
+				<td>
+					<label>
+						<input type="hidden" name="<?php echo $BambooPlugin->get_field_name('disable_dash_welcome'); ?>" value="no" />
+						<input type="checkbox" name="<?php echo $BambooPlugin->get_field_name('disable_dash_welcome'); ?>" value="yes" <?php if ( $BambooPlugin->get_setting('disable_dash_welcome') == "yes") echo 'checked="checked"'; ?> />	Disable redirect to Bamboo Dash on login					</label>
+				</td>
+			</tr>
+			
+			
 
 			<th colspan="2" ><h3>Libraries and Scripts</h3><p>Disables force enqueue. Libraries may be added by other plugins on specific areas of the site (eg. WooCommerce loads scripts on WooCommerce pages)</p></th>
 
