@@ -42,9 +42,11 @@ remove_action('wp_head', 'wp_generator');
 
 // custom admin login header logo
 
+
+
 function my_custom_login_logo()
 {
-	echo '<style  type="text/css">body.login h1 a {  background-image:url("' . BAMBOO_PLUGIN_URL . '/assets/img/logo_admin.png' . '")!important; height: 80px!important; } </style>';
+	echo '<style  type="text/css">body.login h1 a {  background-image:url("' .plugins_url( '../assets/img/logo_admin.png' , __FILE__ ) . '")!important; height: 80px!important; } </style>';
 }
 add_action('login_head',  'my_custom_login_logo');
 
@@ -77,35 +79,6 @@ add_action( 'admin_notices', 'hide_update_notice_to_all_but_admin_users', 1 );
 
 
 
-// Remove Dashboard widgets
-
-add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
-
-function my_custom_dashboard_widgets() {
-	global $wp_meta_boxes;
-	//Right Now - Comments, Posts, Pages at a glance
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['normal']['core']['dashboard_right_now']);
-	//Recent Comments
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['normal']['core']['dashboard_recent_comments']);
-	//Incoming Links
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['normal']['core']['dashboard_incoming_links']);
-	//Plugins - Popular, New and Recently updated WordPress Plugins
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['normal']['core']['dashboard_plugins']);
-
-	//Wordpress Development Blog Feed
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['side']['core']['dashboard_primary']);
-	//Other WordPress News Feed
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['side']['core']['dashboard_secondary']);
-	//Quick Press Form
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['side']['core']['dashboard_quick_press']);
-	//Recent Drafts List
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['side']['core']['dashboard_recent_drafts']);
-	//Recent Activity
-	unset($wp_meta_boxes['dashboard_page_custom-dashboard']['normal']['core']['dashboard_activity']);
-
-}
-
-
 // change default woocommerce placeholder image
 
 add_action( 'init', 'custom_fix_thumbnail' );
@@ -114,7 +87,7 @@ function custom_fix_thumbnail() {
 	add_filter('woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder_img_src');
 
 	function custom_woocommerce_placeholder_img_src( $src ) {
-		$src = BAMBOO_PLUGIN_URL . '/assets/img/placeholder.jpg';
+		$src = plugins_url( '../assets/img/placeholder.png' , __FILE__ );
 		return $src;
 	}
 }

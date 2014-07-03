@@ -104,7 +104,7 @@ function bamboo_css() {
 	wp_enqueue_script("jquery-effects-core");
 
 	
-	wp_register_style( 'core-style', BAMBOO_PLUGIN_URL . '/assets/css/core-styles.css', array(), BB_VERSION, 'all' );
+	wp_register_style( 'core-style', plugins_url( '../assets/css/core-styles.css' , __FILE__ ), array(), BB_VERSION, 'all' );
 	wp_enqueue_style( 'core-style' );	
 
 
@@ -162,9 +162,9 @@ function bamboo_css() {
 	
 	if ( WP_DEBUG ) {
 
-	wp_register_style( 'custom-debug', BAMBOO_PLUGIN_URL . '/assets/css/custom-debug.css', array(), BB_VERSION, 'all' );
+	wp_register_style( 'custom-debug', plugins_url( '../assets/css/custom-debug.css' , __FILE__ ), array(), BB_VERSION, 'all' );
 	wp_enqueue_style( 'custom-debug' );
-    wp_register_style('BBgoogleFonts', 'http://fonts.googleapis.com/css?family=Raleway:400,900,100,200,300|Raleway+Dots');
+    wp_register_style('BBgoogleFonts', '//fonts.googleapis.com/css?family=Raleway:400,900,100,200,300|Raleway+Dots');
 	wp_enqueue_style( 'BBgoogleFonts');
 	
 	}
@@ -177,9 +177,9 @@ add_action( 'wp_enqueue_scripts', 'bamboo_css', 30 );
 
 
 function bamboo_admin() {
-	wp_register_style( 'admin-css', BAMBOO_PLUGIN_URL . '/assets/css/admin.css', array(), BB_VERSION, 'all' );
+	wp_register_style( 'admin-css', plugins_url( '../assets/css/admin.css' , __FILE__ ), array(), BB_VERSION, 'all' );
 	wp_enqueue_style( 'admin-css' );
-	wp_enqueue_script( 'admin-init', BAMBOO_PLUGIN_URL . '/assets/js/jsbackend.js', array('jquery'), null, true );
+	wp_enqueue_script( 'admin-init', plugins_url( '../assets/js/jsbackend.js' , __FILE__ ), array('jquery'), null, true );
 
 }
 
@@ -204,17 +204,17 @@ function register_bamboo_js() {
 	}
 	
 		if ( WP_DEBUG ) {
-			wp_register_script('jsadmin', BAMBOO_PLUGIN_URL .'/assets/js/jsadmin.js', array('jquery','jquery-ui-core','jquery-ui-draggable'), BB_VERSION, true);
+			wp_register_script('jsadmin', plugins_url( '../assets/js/jsadmin.js' , __FILE__ ), array('jquery','jquery-ui-core','jquery-ui-draggable'), BB_VERSION, true);
 			}
 
-	wp_register_script('bamboo_general', BAMBOO_PLUGIN_URL .'/assets/js/general.js', array('jquery'), BB_VERSION, true);
+	wp_register_script('bamboo_general', plugins_url( '../assets/js/general.js' , __FILE__ ), array('jquery'), BB_VERSION, true);
 	
 	global $BambooPlugin;		
 	if ( $BambooPlugin->get_setting('disable_modernizr') != "yes") {		
-		wp_register_script('modernizr',  BAMBOO_PLUGIN_URL . '/assets/js/modernizr.js', array('jquery'), BB_VERSION, true);
+		wp_register_script('modernizr', plugins_url( '../assets/js/modernizr.js' , __FILE__ ), array('jquery'), BB_VERSION, true);
 	}
 	
-	wp_register_script('print_debug_sizes', BAMBOO_PLUGIN_URL .'/assets/js/debug-sizes.js', array('jquery'), BB_VERSION, true);		
+	wp_register_script('print_debug_sizes', plugins_url( '../assets/js/debug-sizes.js' , __FILE__ ), array('jquery'), BB_VERSION, true);		
 			
 
 }
@@ -247,10 +247,10 @@ if ( $BambooPlugin->get_setting('disable_prettyphoto') != "yes" ) {
 
 	function prettyphoto() {
 
-	{
-	wp_enqueue_script( 'prettyPhoto', BAMBOO_PLUGIN_URL . '/assets/js/jquery.prettyPhoto.js', array( 'jquery' ), BB_VERSION, true );
-	wp_enqueue_style( 'prettyPhoto_css', BAMBOO_PLUGIN_URL . '/assets/css/prettyPhoto.css' );
-	}
+	
+	wp_enqueue_script( 'prettyPhoto',  plugins_url( '../assets/js/jquery.prettyPhoto.js' , __FILE__ ), BB_VERSION, true );
+	wp_enqueue_style( 'prettyPhoto_css', plugins_url( '../assets/css/prettyPhoto.css' , __FILE__ ) );
+	
 	}
 
 }

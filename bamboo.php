@@ -23,9 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 define('BAMBOO_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
 define('BAMBOO_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
-define('BAMBOO_PLUGIN_URL', plugins_url());
+define('BAMBOO_PLUGIN_URL', dirname(__FILE__));
 
 define('PARENT_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template());
+
 
 
 
@@ -226,8 +227,7 @@ require_once('includes/core-templates.php');			// custom templates
 require_once('includes/core-enqueue.php');				// javascript and css
 require_once('includes/core-media.php');				// media sizes and upload limits
 require_once('includes/core-general.php');				// general customisations
-require_once('includes/core-dashboard.php');			// custom dashboard
-require_once('includes/core-menu.php');					// admin menu
+require_once('includes/core-admin.php');				// custom dashboard and admins screens
 
 function bb_plugins_loaded() {
 	require_once('includes/slideout.php');					// admin menu
