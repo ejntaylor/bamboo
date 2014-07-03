@@ -22,11 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // set paths
 
 define('BAMBOO_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
-define('BAMBOO_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . BAMBOO_PLUGIN_NAME);
-define('BAMBOO_PLUGIN_URL', WP_PLUGIN_URL . '/' . BAMBOO_PLUGIN_NAME);
+define('BAMBOO_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
+define('BAMBOO_PLUGIN_URL', plugins_url());
 
 define('PARENT_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template());
-
 
 
 
