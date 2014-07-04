@@ -4,17 +4,17 @@
 
 // redirect to Bamboo Dash on Login
 
-global $BambooPlugin;		
-if ( $BambooPlugin->get_setting('disable_dash_welcome') != "yes") {	
-	
-	function bb_dash_default() {
+function bb_dash_default() {
+
+	global $BambooPlugin;		
+	if ( $BambooPlugin->get_setting('disable_dash_welcome') != "yes") {	
 	   return  admin_url( 'index.php?page=dashboard' );
-	  }
-	
-	add_filter('login_redirect', 'bb_dash_default');
+	   }
+}
+
+add_filter('login_redirect', 'bb_dash_default');
 	
 
-}
 
 
 /*
