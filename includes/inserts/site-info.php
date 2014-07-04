@@ -39,8 +39,7 @@ global $wp_version;
 
 	?>
 
-<!-- HTML -->
-
+<div class="scroll">
 	<h3>Theme Info</h3>
 
 	<table id="site-info">
@@ -172,3 +171,5 @@ echo '</tbody></table>';
 
 
 <?php do_action('info_panel_items'); ?>
+
+</div>
