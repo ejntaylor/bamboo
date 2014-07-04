@@ -10,7 +10,7 @@
    License: GPL
    Copyright: Raison Online LTD.
    Text Domain: bamboo
-   GitHub Plugin URI: https://github.com/raisonon/bamboo
+   @GitHub Plugin URI: https://github.com/raisonon/bamboo
       
    */
 
