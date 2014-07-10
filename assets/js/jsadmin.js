@@ -274,7 +274,7 @@ var src = $(this).attr('src');
 	$('script').each(function(index, value) {
 		var src = $(this).prop('src');
 		src = src || 'na?ver=N/A';
-		console.log(src);
+		//console.log(src);
 		var version = getUrlParameters("ver", src, true);
 		if (src == 'na?ver=N/A') {
 			urlstrip = 'Style Injected';
