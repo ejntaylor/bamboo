@@ -28,6 +28,7 @@ echo '<p>Settings Have Been Reset</p><p><a href="'. admin_url( '/admin.php?page=
 		$BambooPlugin->update_setting('disable_modernizr', 'no');
 		$BambooPlugin->update_setting('disable_fontawe', 'no');
 		$BambooPlugin->update_setting('disable_dash_welcome', 'no');
+		$BambooPlugin->update_setting('debug', 'no');
 
 
 
@@ -243,7 +244,15 @@ jQuery(document).ready(function($){
 						<input type="checkbox" name="<?php echo $BambooPlugin->get_field_name('disable_dash_welcome'); ?>" value="yes" <?php if ( $BambooPlugin->get_setting('disable_dash_welcome') == "yes") echo 'checked="checked"'; ?> />	Disable redirect to Bamboo Dash on login					</label>
 				</td>
 			</tr>
-			
+
+			<tr>
+				<th scope="row" valign="top">Enable Debug Mode</th>
+				<td>
+					<label>
+						<input type="hidden" name="<?php echo $BambooPlugin->get_field_name('debug'); ?>" value="no" />
+						<input type="checkbox" name="<?php echo $BambooPlugin->get_field_name('debug'); ?>" value="yes" <?php if ( $BambooPlugin->get_setting('debug') == "yes") echo 'checked="checked"'; ?> />	Enable Debug and Logging</label>
+				</td>
+			</tr>			
 			
 
 			<th colspan="2" ><h3>Libraries and Scripts</h3><p>Disables force enqueue. Libraries may be added by other plugins on specific areas of the site (eg. WooCommerce loads scripts on WooCommerce pages)</p></th>

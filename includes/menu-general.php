@@ -28,14 +28,19 @@
 				<a href="?page=bamboo_options" class="nav-tab <?php echo $active_tab == 'welcome'  ? 'nav-tab-active' : ''; ?>">
 				<?php _e( 'Bamboo Status', 'bamboo' ); ?></a>
 
+				<a href="?page=bamboo_options&tab=tab3" class="nav-tab <?php echo $active_tab == 'tab3'  ? 'nav-tab-active' : ''; ?>">
+				<?php _e( 'Error Log', 'bamboo' ); ?></a>
+
+				<a href="?page=bamboo_options&tab=tab4" class="nav-tab <?php echo $active_tab == 'tab4'  ? 'nav-tab-active' : ''; ?>">
+				<?php _e( 'PHP Info', 'bamboo' ); ?></a>
+				
 				<a href="<?php echo admin_url(); ?>" class="nav-tab">
 				<?php _e( 'Goto Client Dashboard', 'bamboo' ); ?></a>
 
 				<a href="https://raison.co/bamboo" target="_blank" class="nav-tab">
 				<?php _e( 'Get Bamboo Premium', 'bamboo' ); ?></a>
 				
-				<a href="https://app.asana.com" target="_blank" class="nav-tab">
-				<?php _e( 'Goto Asana', 'bamboo' ); ?></a>
+
 
 			</h2>
 
@@ -57,6 +62,30 @@
 					require_once('dashboard-stats.php');
 				}
 
+
+				
+
+				elseif ( $active_tab == 'tab3' )  {
+					//require_once('dashboard-logs.php');
+					//readfile( plugins_url( ) . '/bamboo/logs/php_error.log' );
+					
+					$file = file_get_contents( plugins_url( ) . '/bamboo/logs/php_error.log' );
+					echo nl2br( $file );
+
+				
+				}
+
+
+				elseif ( $active_tab == 'tab4' )  {
+				
+				 echo '<style>a:link, body {background-color:initial!important;}</style>';
+
+					phpinfo();
+
+				
+				}
+				
+				
 
 
 

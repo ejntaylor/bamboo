@@ -99,7 +99,7 @@ function custom_fix_thumbnail() {
 
 // always show admin bar
 function bamboo_login_adminbar( $wp_admin_bar) {
-	if ( is_user_logged_in() ) {
+	if ( current_user_can('edit_posts') ) {
 		return true;
 	}
 

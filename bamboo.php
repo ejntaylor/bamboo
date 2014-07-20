@@ -19,6 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 
+
+
+
 // set paths
 
 define('BAMBOO_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
@@ -138,6 +141,7 @@ class BambooPlugin extends WordPress_SimpleSettings {
 		$this->add_setting('disable_flex', 'no');
 		$this->add_setting('disable_modernizr', 'no');
 		$this->add_setting('disable_fontawe', 'no');
+		$this->add_setting('debug', 'no');
 
 
 
@@ -230,13 +234,18 @@ require_once('includes/core-general.php');				// general customisations
 require_once('includes/core-admin.php');				// custom dashboard and admins screens
 
 function bb_plugins_loaded() {
-	require_once('includes/slideout.php');					// admin menu
+	require_once('includes/tools.php');					// admin menu
 }
 
 add_action('plugins_loaded','bb_plugins_loaded');
 
 
 
+// set debug
+
+global $BambooPlugin;		
+if ( $BambooPlugin->get_setting('debug') != "no")
+	//require_once('includes/debug.php');
 
 
 
