@@ -87,7 +87,14 @@ function custom_fix_thumbnail() {
 	add_filter('woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder_img_src');
 
 	function custom_woocommerce_placeholder_img_src( $src ) {
-		$src = plugins_url( '../assets/img/placeholder.png' , __FILE__ );
+		$child_placeholder = get_stylesheet_directory() .'/bamboo/placeholder.jpg';
+		$child_placeholder_uri = get_stylesheet_directory_uri() .'/bamboo/placeholder.jpg';
+
+	if (file_exists($child_placeholder)) :
+		$src = $child_placeholder_uri;
+	else :
+		$src = plugins_url( '../assets/img/placeholder.jpg' , __FILE__ );
+	endif;
 		return $src;
 	}
 }
