@@ -114,6 +114,7 @@ function style_switch() {
 
 <li><a href="javascript:void(0)" class="stylesCSSToggle"><i class="fa fa-bullseye"></i><span>Element Detector Toggle</span></a></li>
 <li><a href="javascript:void(0)" class="ajaxload"><i class="fa fa-mobile"></i><span>Responsive Screen Tester</span></a></li>
+<li><a href="javascript:void(0)" class="hideOverlays"><i class="fa fa-moon-o"></i><span>Hide Overlays</span></a></li>
 </ul>
 
 

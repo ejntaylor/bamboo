@@ -324,6 +324,17 @@ var src = $(this).attr('src');
     $( "#sideWrapper" ).draggable();
 
 
+	// Overlay Hide
+	
+		$('.hideOverlays').click(function() {
+
+							$('.debug-screen-size').toggle();
+							$('#wpadminbar').toggle();
+							$('#us_report_button').toggle();
+							
+
+});
+
 
 	
 	
