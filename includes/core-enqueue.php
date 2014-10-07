@@ -250,8 +250,10 @@ if ( $BambooPlugin->get_setting('disable_prettyphoto') != "yes" ) {
 	
 	wp_enqueue_script( 'prettyPhoto',  plugins_url( '../assets/js/jquery.prettyPhoto.js' , __FILE__ ), BB_VERSION, true );
 	wp_enqueue_style( 'prettyPhoto_css', plugins_url( '../assets/css/prettyPhoto.css' , __FILE__ ) );
-	
+		
 	}
+
+	add_action ('wp_head', function() { echo '<style> $("a[rel^=\'prettyPhoto\']").prettyPhoto();</style>';  });
 
 }
 
