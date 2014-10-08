@@ -97,7 +97,7 @@ function bamboo_css() {
 	global $BambooPlugin;		
 	if ( $BambooPlugin->get_setting('disable_fontawe') != "yes") {		
 	
-		wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', array(), BB_VERSION, 'all' );
+		wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css', array(), BB_VERSION, 'all' );
 		wp_enqueue_style( 'font-awesome' );
 	}
 	
