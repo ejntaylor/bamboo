@@ -141,7 +141,6 @@ class BambooPlugin extends WordPress_SimpleSettings {
 		$this->add_setting('disable_flex', 'no');
 		$this->add_setting('disable_modernizr', 'no');
 		$this->add_setting('disable_fontawe', 'no');
-		$this->add_setting('debug', 'no');
 
 
 
@@ -240,12 +239,6 @@ function bb_plugins_loaded() {
 add_action('plugins_loaded','bb_plugins_loaded');
 
 
-
-// set debug
-
-global $BambooPlugin;		
-if ( $BambooPlugin->get_setting('debug') != "no")
-	//require_once('includes/debug.php');
 
 
 
