@@ -143,6 +143,7 @@ function bamboo_options_panel(){
   add_submenu_page( 'bamboo_options', 'General', 'General', 'manage_options', 'bamboo_options');
   add_submenu_page( 'bamboo_options', 'Settings', 'Settings', 'manage_options', 'bamboo-settings', 'bb_func_settings');
   add_submenu_page( 'bamboo_options', 'Reference Links', 'Reference Links', 'manage_options', 'bamboo-ref', 'bb_func_ref');
+  add_submenu_page( 'bamboo_options', 'Deactivate Plugins', 'Deactivate Plugins', 'manage_options', 'bamboo-deactivate', 'bb_func_deactivate');
 
 }
 
@@ -181,6 +182,13 @@ function bamboo_content(){
                 <h2>Bamboo Content</h2></div>';
 }
 
+function bb_func_deactivate(){
+                echo '<div class="wrap"><div id="icon-options-general" class="icon32"><br></div>
+                <h2>Deactivate</h2></div>';
+                
+				require_once('menu-deactivate.php');
+
+}
 
 
 
