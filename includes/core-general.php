@@ -304,7 +304,7 @@ if (PARENT_THEME == 'canvas') {
 	add_filter( 'woo_archive_title', 'new_woo_archive_title' );
 	function new_woo_archive_title () {
 		$category = single_cat_title("", false);
-		$new_title = '<h1>'. $category .'</h1>' . '<div>' . strip_tags(category_description($category_id)) . '</div>';
+		$new_title = '<h1 class="archive_header">'. $category .'</h1>' ;
 		return $new_title;
 	} // End filter
 
