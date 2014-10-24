@@ -492,7 +492,7 @@ deactivate_plugins( '/raison-core/raison-core.php' );
 add_filter( 'the_title', 'wpse145940_hide_hidden_title', 10, 2 );
 
 function wpse145940_hide_hidden_title( $title, $postid ) {
-    if ( get_post_meta( $postid, 'hide_title', true ) == 'true' ) {
+    if ( get_post_meta( $postid, 'hide_h1_title', true ) == true ) {
         $title = '';
     }
 
