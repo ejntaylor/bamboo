@@ -1,0 +1,144 @@
+/* hide dashboard */
+
+
+/* dashboard */
+
+.dash-col {
+	width:45%;
+}
+
+.dash-left {
+	float:left;
+	padding-right:4%;
+}
+
+.dash-right {
+	float:right;
+}
+
+.woo-sc-hr, .woo-sc-divider {
+clear: both;
+display: block;
+margin-bottom: 20px;
+padding-top: 20px;
+width: 100%;
+}
+
+.dash-head {
+	overflow:hidden;
+}
+
+.dash-head .about-text {
+	float:left;
+	width:60%;
+	margin-right:0;
+}
+.dash-head .woo-sc-button {
+	float:right;
+}
+
+/* admin dash */
+
+.bamboo-general table th {
+	text-align:left;
+}
+
+.bamboo-general table td {
+	margin: 0 30px 0 0;
+	padding: 0 30px 0 0;
+}
+
+
+.bamboo-general hr {
+	margin: 20px 0;
+}
+/* Dashboard - Plugin Checker */
+
+#raison-plugin-checker {
+	margin-top:40px;
+}
+
+#raison-plugin-checker table th, #raison-plugin-checker table td {
+	margin: 0 30px 0 0;
+	padding: 0 30px 0 0;
+
+}
+
+/* Menu - Deactivate */
+
+.bb_twocol {
+width: 45%;
+float: left;
+margin-right:5%;
+overflow: hidden;
+
+}
+
+.bb_twocol.last {
+margin-right:0;
+}
+
+
+/* Menu - General Table */
+
+#site-info tr {
+	padding:10px;
+}
+
+#site-info td {
+	padding-right:50px;
+}
+
+#site-info td, #site-info tr, #site-info th {
+	text-align:left;
+}
+
+
+/* Button */
+
+.admin-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #b23e35;
+	width:230px;
+
+}
+.admin-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+	color:#fff;
+}.admin-button:active {
+	position:relative;
+	top:1px;
+}

@@ -1,0 +1,16 @@
+[15-Jul-2014 10:03:36 UTC] PHP Warning:  require_once(includes/debuga.php): failed to open stream: No such file or directory in /Users/elliot/Documents/Websites/template.dev/wp-content/plugins/bamboo/bamboo.php on line 250
+[15-Jul-2014 10:03:36 UTC] PHP Stack trace:
+[15-Jul-2014 10:03:36 UTC] PHP   1. {main}() /Users/elliot/Documents/Websites/template.dev/index.php:0
+[15-Jul-2014 10:03:36 UTC] PHP   2. require() /Users/elliot/Documents/Websites/template.dev/index.php:17
+[15-Jul-2014 10:03:36 UTC] PHP   3. require_once() /Users/elliot/Documents/Websites/template.dev/wp-blog-header.php:12
+[15-Jul-2014 10:03:36 UTC] PHP   4. require_once() /Users/elliot/Documents/Websites/template.dev/wp-load.php:29
+[15-Jul-2014 10:03:36 UTC] PHP   5. require_once() /Users/elliot/Documents/Websites/template.dev/wp-config.php:93
+[15-Jul-2014 10:03:36 UTC] PHP   6. include_once() /Users/elliot/Documents/Websites/template.dev/wp-settings.php:214
+[15-Jul-2014 10:03:36 UTC] PHP Fatal error:  require_once(): Failed opening required 'includes/debuga.php' (include_path='.:/Applications/XAMPP/xamppfiles/lib/php') in /Users/elliot/Documents/Websites/template.dev/wp-content/plugins/bamboo/bamboo.php on line 250
+[15-Jul-2014 10:03:36 UTC] PHP Stack trace:
+[15-Jul-2014 10:03:36 UTC] PHP   1. {main}() /Users/elliot/Documents/Websites/template.dev/index.php:0
+[15-Jul-2014 10:03:36 UTC] PHP   2. require() /Users/elliot/Documents/Websites/template.dev/index.php:17
+[15-Jul-2014 10:03:36 UTC] PHP   3. require_once() /Users/elliot/Documents/Websites/template.dev/wp-blog-header.php:12
+[15-Jul-2014 10:03:36 UTC] PHP   4. require_once() /Users/elliot/Documents/Websites/template.dev/wp-load.php:29
+[15-Jul-2014 10:03:36 UTC] PHP   5. require_once() /Users/elliot/Documents/Websites/template.dev/wp-config.php:93
+[15-Jul-2014 10:03:36 UTC] PHP   6. include_once() /Users/elliot/Documents/Websites/template.dev/wp-settings.php:214

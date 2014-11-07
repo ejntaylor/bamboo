@@ -1,0 +1,97 @@
+/* Style Page */
+
+#style-color-list {
+   width: 100%;
+    display: table;
+    table-layout: fixed; 
+    padding-left: 0;
+}
+
+#style-color-list li {
+	text-align: center;
+	width: 26%;
+	padding-right: 20px;
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+#style-color-list li h4 {
+	padding-bottom:5px;
+}
+
+
+#style-color-list li div {
+width: auto;
+height: 50px;
+}
+
+
+
+@media only screen and (max-width: 959px) and (min-width: 768px)
+#content.col-full, #header, .nav-cont, #footer-widgets {
+{
+width: 768px;
+}
+}
+
+
+/* admin bar to bottom */
+
+
+#wpadminbar {
+    top: auto !important;
+    bottom: 0;
+    position: fixed;
+
+}
+#wpadminbar .quicklinks>ul>li {
+    position:relative;
+}
+#wpadminbar .ab-top-menu>.menupop>.ab-sub-wrapper {
+    bottom:28px;
+}
+
+/* usersnap */
+
+.us-button-c50731562836a85c59cfa515f8f8ab70 {
+background-color: #DF2A00!important;
+background-image: url('../img/icon.png')!important;
+border-top: 2px solid  #DF2A00!important;
+
+}
+
+.us-widget .us-widget-panel .us-widget-panel-header {
+background: #DF2A00!important;
+border-bottom: 1px solid #DF2A00!important;
+}
+
+.us-widget .us-widget-panel .us-widget-panel-header .us-widget-panel-header-logo {
+background-image: url('../img/core/icon-32.png')!important;
+}
+
+/* hide debug top */
+
+.debug-screen-size, .debug-screen-size ul li {
+display:none;
+} 
+
+
+
+.flexslider > ul > li:first-child {display: block; -webkit-backface-visibility: visible;} 
+.flexslider > ul > li {display: none; -webkit-backface-visibility: hidden;}
+
+
+/* Style Page */
+
+.primary-color-bg {
+	background-color:#BB303F;
+}
+
+
+/* Admin Bar */
+
+#wpadminbar.nojs .ab-top-menu > li.menupop.icon-bamboo:hover > .ab-item:before, #wpadminbar .ab-top-menu > li.menupop.icon-bamboo.hover > .ab-item:before, #wpadminbar.nojs .ab-top-menu > li.menupop.icon-bamboo > .ab-item:before, #wpadminbar .ab-top-menu > li.menupop.icon-bamboo > .ab-item:before {
+	content: "\f192";
+	font-family: FontAwesome;
+}
+
