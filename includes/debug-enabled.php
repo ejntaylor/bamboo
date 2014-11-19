@@ -1,8 +1,4 @@
 <?php 
-<<<<<<< HEAD
-=======
-
->>>>>>> 14c24feae75fce7d829b8637caec7ef019e1eaba
 /**
  * For developers: WordPress debugging mode.
  *
