@@ -238,6 +238,11 @@ require_once('includes/core-admin.php');				// custom dashboard and admins scree
 
 function bb_plugins_loaded() {
 	require_once('includes/tools.php');					// admin menu
+	
+	// set debug
+	global $BambooPlugin;		
+	if ( $BambooPlugin->get_setting('debug') != "no") require_once('includes/debug.php');	
+
 }
 
 add_action('plugins_loaded','bb_plugins_loaded');
