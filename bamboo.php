@@ -85,9 +85,6 @@ function bambino_check() {
 		define('BAMBINO_VERSION_NUM', '0.11');
 		define('BAMBINO_INSTALLED', false);
 
-
-
-
 		if (empty($nonbb_currentheme)) { define('NONBB_VERSION_NUM', $nonbb_currentheme->get( 'Version' )); }
 		else {define('NONBB_VERSION_NUM', 'na');}
 	}
@@ -136,7 +133,6 @@ class BambooPlugin extends WordPress_SimpleSettings {
 		$this->add_setting('disallow_emails_enable', 'no');
 		$this->add_setting('disallow_emails_address', get_bloginfo( 'admin_email' ));
 		$this->add_setting('disallow_count', '0');
-
 		$this->add_setting('disable_prettyphoto', 'no');
 		$this->add_setting('disable_flex', 'no');
 		$this->add_setting('disable_modernizr', 'no');
@@ -199,22 +195,6 @@ class BambooPlugin extends WordPress_SimpleSettings {
 			) ,
 		);
 		$this->add_setting('req_plugins_arr', $plugin_array );
-		/*$this->add_setting('req_plugins_arr', 'woocommerce/woocommerce.php;
-			wordpress-seo/wp-seo.php;
-			usersnap/usersnap.php; video-user-manuals/plugin.php;
-			woodojo/woodojo.php;
-			worker/functions.php;
-			advanced-custom-fields/acf.php;
-			admin-menu-editor-pro/menu-editor.php;
-			image-widget/image-widget.php ;
-			bwp-minify/bwp-minify.php;
-			cookies-for-comments/cookies-for-comments.php;
-			debug-bar/debug-bar.php;
-			woocommerce-debug-bar/woocommerce-debug-bar.php;
-			woothemes-updater'
-		);
-		 *
-		 */
 
 	}
 }
