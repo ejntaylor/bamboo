@@ -2,6 +2,10 @@ Bamboo Lite Change Log
 ======================
 
 
+1.2.9 - 09/12
+==============
+
+A large update mainly to do with Bambino. Removes Bamboo from adding the CSS and JS which is now managed by the Bambino theme (using minified and merged JS and CSS).
 
 1.2.8.4 - 10/06
 ===============
