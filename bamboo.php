@@ -4,7 +4,7 @@
    Plugin Name: Bamboo
    Plugin URI: http://raison.co/bamboo
    Description: Strong, Light and Flexible Development Framework for Wordpress
-   Version: 1.2.8.9
+   Version: 1.2.9
    Author: Raison
    Author URI: http://raison.co
    License: GPL
