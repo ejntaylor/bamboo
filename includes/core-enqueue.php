@@ -135,7 +135,7 @@ function bamboo_css() {
 
 		// Support for post 1.1 child themes
 
-		elseif (BAMBINO_VERSION_NUM > 1 && BAMBINO_VERSION_NUM > 1.2 ) {
+		elseif (BAMBINO_VERSION_NUM > 1 && BAMBINO_VERSION_NUM < 1.2 ) {
 
 			wp_register_style( 'child_layout', get_stylesheet_directory_uri() . '/assets/css/layout.css', array(), BB_VERSION, 'all' );
 			wp_enqueue_style( 'child_layout' );
@@ -235,7 +235,7 @@ add_action('wp_head', 'print_bamboo_head');
 
 // Legacy Bambino JS
 
-if (defined('BAMBINO_INSTALLED') && BAMBINO_VERSION_NUM > 1.2 ) {
+if (defined('BAMBINO_INSTALLED') && BAMBINO_VERSION_NUM < 1.2 ) {
 	
 	function legacy_print_bamboo_foot() {
 		wp_print_scripts('modernizr');
