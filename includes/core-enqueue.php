@@ -103,21 +103,24 @@ function bamboo_css() {
 	
 	wp_enqueue_script("jquery-effects-core");
 
-	
+	// bamboo styles	
 	wp_register_style( 'core-style', plugins_url( '../assets/css/core-styles.css' , __FILE__ ), array(), BB_VERSION, 'all' );
 	wp_enqueue_style( 'core-style' );	
 
 
 	if (defined('BAMBINO_INSTALLED')) {
 
+	if (BAMBINO_VERSION_NUM > 1 && BAMBINO_VERSION_NUM < 1.2 ) {
+
+
 	wp_register_style( 'woo-styling', get_stylesheet_directory_uri() . '/assets/css/woo-styling.css', array(), BB_VERSION, 'all' );
 	wp_enqueue_style( 'woo-styling' );
 
-	
+	}
 	
 	// support for older (pre v.1) child themes
 	
-	if (BAMBINO_VERSION_NUM < 1 && BAMBINO_VERSION_NUM > 0.1 ) {
+	if (BAMBINO_VERSION_NUM > 0.1 && BAMBINO_VERSION_NUM < 1 ) {
 	
 			wp_register_style( 'custom-styles', get_stylesheet_directory_uri() . '/assets/css/custom-styles.css', array(), BB_VERSION, 'all' );
 			wp_enqueue_style( 'custom-styles' );
@@ -132,7 +135,7 @@ function bamboo_css() {
 		
 	// Support for post 1.1 child themes
 		
-		elseif (BAMBINO_VERSION_NUM > 1 ) {
+		elseif (BAMBINO_VERSION_NUM > 1 && BAMBINO_VERSION_NUM > 1.2 ) {
 		
 			wp_register_style( 'child_layout', get_stylesheet_directory_uri() . '/assets/css/layout.css', array(), BB_VERSION, 'all' );
 			wp_enqueue_style( 'child_layout' );
@@ -155,6 +158,11 @@ function bamboo_css() {
 			wp_register_style( 'child_responsive_phones', get_stylesheet_directory_uri() . '/assets/css/responsive-phones.css', array(), BB_VERSION, 'all' );
 			wp_enqueue_style( 'child_responsive_phones' );		
 			
+		}
+		
+		else {
+				wp_deregister_style( 'woo-styling' );
+
 		}
 		
 		} // bambino installed
