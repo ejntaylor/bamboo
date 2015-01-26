@@ -137,64 +137,8 @@ class BambooPlugin extends WordPress_SimpleSettings {
 		$this->add_setting('disable_flex', 'no');
 		$this->add_setting('disable_modernizr', 'no');
 		$this->add_setting('disable_fontawe', 'no');
-
-
-
 		$this->add_setting('remove_woo_nav', 'no');
 
-		$plugin_array = Array(
-			1 => array(
-				'name' => 'WooCommerce',
-				'slug' => 'woocommerce',
-				'required' => true,
-			) ,
-			2 => array(
-				'name' => 'Wordpress SEO',
-				'slug' => 'wordpress-seo',
-				'required' => false,
-			) ,
-			3 => array(
-				'name' => 'Usersnap',
-				'slug' => 'usersnap',
-				'required' => false,
-			) ,
-			4 => array(
-				'name' => 'Video User Manuals',
-				'slug' => 'video-user-manuals',
-				'required' => false,
-			) ,
-			5 => array(
-				'name' => 'Woo Dojo',
-				'slug' => 'woodojo',
-				'required' => true,
-			) ,
-			6 => array(
-				'name' => 'Manage WP',
-				'slug' => 'worker',
-				'required' => false,
-			) ,
-			7 => array(
-				'name' => 'WooThemes Updater',
-				'slug' => 'woothemes-updater',
-				'required' => true,
-			) ,
-			8 => array(
-				'name' => 'Advanced Custom Fields',
-				'slug' => 'advanced-custom-fields',
-				'required' => true,
-			) ,
-			9 => array(
-				'name' => 'BWP Minify',
-				'slug' => 'bwp-minify',
-				'required' => false,
-			) ,
-			10 => array(
-				'name' => 'Cookies for Comments',
-				'slug' => 'cookies-for-comments',
-				'required' => false,
-			) ,
-		);
-		$this->add_setting('req_plugins_arr', $plugin_array );
 
 	}
 }
@@ -216,8 +160,8 @@ function bb_plugins_loaded() {
 	require_once('includes/tools.php');					// admin menu
 	
 	// set debug
-	global $BambooPlugin;		
-	if ( $BambooPlugin->get_setting('debug') != "no") require_once('includes/debug.php');	
+	// global $BambooPlugin;		
+	// if ( $BambooPlugin->get_setting('debug') != "no" && !WP_DEBUG) require_once('includes/debug.php');	
 
 }
 
