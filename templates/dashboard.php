@@ -24,9 +24,9 @@ $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'news';
 ?>
 	
 	<h2 class="nav-tab-wrapper">
-		<a href="?page=custom-dashboard&tab=news" class="nav-tab <?php echo $active_tab == 'news' ? 'nav-tab-active' : ''; ?>">
+		<a href="?page=dashboard&tab=news" class="nav-tab <?php echo $active_tab == 'news' ? 'nav-tab-active' : ''; ?>">
 			<?php _e( 'Welcome', 'bamboo' ); ?></a>
-			<a href="?page=custom-dashboard&tab=stats" class="nav-tab <?php echo $active_tab == 'stats' ? 'nav-tab-active' : ''; ?>">
+			<a href="?page=dashboard&tab=stats" class="nav-tab <?php echo $active_tab == 'stats' ? 'nav-tab-active' : ''; ?>">
 			<?php _e( 'Site Overview', 'bamboo' ); ?></a>
 	</h2>
 	
@@ -35,9 +35,9 @@ $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'news';
 
 			<?php
 			if( $active_tab == 'news' ) {
-				require_once('dashboard-news.php');
+				require_once('dashboard_news.php');
 			} elseif ( $active_tab == 'stats' )  {
-				require_once('dashboard-stats.php');
+				require_once('dashboard_stats.php');
 			}
 
 			?>
