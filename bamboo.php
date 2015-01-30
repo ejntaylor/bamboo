@@ -106,6 +106,8 @@ else {define( 'BB_VERSION', 'BAMBOO_VERSION_NUM' );}
 
 // classes
 
+require_once('classes/custom_dash.php');			// custom dashboard
+
 
 
 // simple settings
@@ -150,11 +152,10 @@ $BambooPlugin = new BambooPlugin();
 
 // require php files
 
-require_once('includes/core-templates.php');			// custom templates
-require_once('includes/core-enqueue.php');				// javascript and css
-require_once('includes/core-media.php');				// media sizes and upload limits
-require_once('includes/core-general.php');				// general customisations
-require_once('includes/core-admin.php');				// custom dashboard and admins screens
+require_once('includes/templates.php');				// custom templates
+require_once('includes/enqueue.php');				// javascript and css
+require_once('includes/media.php');					// media sizes and upload limits
+require_once('includes/general.php');				// general customisations
 
 function bb_plugins_loaded() {
 	require_once('includes/tools.php');					// admin menu

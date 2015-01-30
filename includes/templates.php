@@ -163,7 +163,7 @@ function style_page_title() {
 
 
 function style_page_template() {
-  include(BAMBOO_PLUGIN_DIR ."/templates/template-style.php");
+  include(BAMBOO_PLUGIN_DIR ."/templates/template_style.php");
   exit;
 }
 

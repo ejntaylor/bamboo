@@ -365,4 +365,48 @@ function wpse145940_hide_hidden_title( $title, $postid ) {
     return $title;
 }
 
+
+
+
+
+// redirect to Bamboo Dash on Login
+
+function bb_dash_default() {
+
+	global $BambooPlugin;		
+	if ( $BambooPlugin->get_setting('disable_dash_welcome') != "yes") {	
+	   return  admin_url( 'index.php?page=dashboard' );
+	   }
+}
+
+add_filter('login_redirect', 'bb_dash_default');
+	
+
+
+
+// Add Menu Items
+function bamboo_options_panel(){  
+  add_options_page('Bamboo Settings', 'Bamboo', 'manage_options', 'bamboo-settings', 'bb_func_settings');
+}
+
+add_action('admin_menu', 'bamboo_options_panel');
+
+
+
+
+// Define new menu page content
+function bamboo_options() {
+
+				require_once(BAMBOO_PLUGIN_DIR.'/templates/dashboard.php');
+
+}; 
+
+function bb_func_settings(){
+                echo '<div class="wrap"><div id="icon-options-general" class="icon32"><br></div>
+                <h2>Settings</h2></div>';
+				require_once('menu_settings.php');
+
+}
+
+
 ?>

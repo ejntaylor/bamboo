@@ -309,7 +309,7 @@ var src = $(this).attr('src');
 			duration: 500
 		});
 		$('body').addClass('noscroll');
-		$(".screen_size_div").load('/wp-content/plugins/bamboo/includes/debug-size.php');
+		$(".screen_size_div").load('/wp-content/plugins/bamboo/includes/debug_size.php');
 	});
 	// Styles - Advanced Toggle
 	$(".styletheme i").click(function() {

@@ -25,25 +25,21 @@
     <!-- Output for Options Page -->
 
         	<h2 class="nav-tab-wrapper">
-				<a href="?page=bamboo_options" class="nav-tab <?php echo $active_tab == 'welcome'  ? 'nav-tab-active' : ''; ?>">
+				<a href="?page=dashboard" class="nav-tab <?php echo $active_tab == 'welcome'  ? 'nav-tab-active' : ''; ?>">
 				<?php _e( 'Bamboo Status', 'bamboo' ); ?></a>
 				
 				<a href="/?style" target="_blank" class="nav-tab">
 				<?php _e( 'Style Page', 'bamboo' ); ?></a>
 
-				<a href="?page=bamboo_options&tab=tab3" class="nav-tab <?php echo $active_tab == 'tab3'  ? 'nav-tab-active' : ''; ?>">
+				<a href="?page=dashboard&tab=tab3" class="nav-tab <?php echo $active_tab == 'tab3'  ? 'nav-tab-active' : ''; ?>">
 				<?php _e( 'Error Log', 'bamboo' ); ?></a>
 
-				<a href="?page=bamboo_options&tab=tab4" class="nav-tab <?php echo $active_tab == 'tab4'  ? 'nav-tab-active' : ''; ?>">
+				<a href="?page=dashboard&tab=tab4" class="nav-tab <?php echo $active_tab == 'tab4'  ? 'nav-tab-active' : ''; ?>">
 				<?php _e( 'PHP Info', 'bamboo' ); ?></a>
 				
 				<a href="<?php echo admin_url(); ?>" class="nav-tab">
 				<?php _e( 'Goto Client Dashboard', 'bamboo' ); ?></a>
 				
-				<a href="https://raison.co/bamboo" target="_blank" class="nav-tab">
-				<?php _e( 'Get Bamboo Premium', 'bamboo' ); ?></a>
-				
-
 
 			</h2>
 
