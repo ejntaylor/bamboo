@@ -136,15 +136,8 @@ function my_custom_dashboard_widgets() {
 
 
 // Add Menu Items
-function bamboo_options_panel(){
-  add_menu_page('', 'Bamboo', 'manage_options', 'bamboo_options', 'bamboo_options', null, 3.12);
-  
-  // add sub-menus
-  add_submenu_page( 'bamboo_options', 'General', 'General', 'manage_options', 'bamboo_options');
-  add_submenu_page( 'bamboo_options', 'Settings', 'Settings', 'manage_options', 'bamboo-settings', 'bb_func_settings');
-  add_submenu_page( 'bamboo_options', 'Reference Links', 'Reference Links', 'manage_options', 'bamboo-ref', 'bb_func_ref');
-  //add_submenu_page( 'bamboo_options', 'Deactivate Plugins', 'Deactivate Plugins', 'manage_options', 'bamboo-deactivate', 'bb_func_deactivate');
-
+function bamboo_options_panel(){  
+  add_options_page('Bamboo Settings', 'Bamboo', 'manage_options', 'bamboo-settings', 'bb_func_settings');
 }
 
 add_action('admin_menu', 'bamboo_options_panel');
@@ -195,7 +188,7 @@ function bb_func_deactivate(){
 // Define new menu page content
 function bamboo_options() {
 
-				require_once('menu-general.php');
+				require_once(BAMBOO_PLUGIN_DIR.'/templates/dashboard.php');
 
 }; 
 

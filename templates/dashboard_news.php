@@ -1,24 +1,3 @@
-	<div class="changelog dash-col dash-left">	
-			<h4><?php _e( 'Video Guides and the Manual', 'bamboo' ); ?></h4>
-			<p><?php _e( 'If you want to check how to do something then take a look under the Manual tab on the left. This includes Videos and a PDF which outlines how to use Wordpress and WooCommerce.', 'bamboo' ); ?></p>
-
-			<h4><?php _e( 'Editing Pages', 'bamboo' ); ?></h4>
-			<p><?php _e( 'Where possible we have made content editable from the Wordpress backend. This means you can goto the edit screen of whatever section you want to amend and will see an option to edit. For example for a post, page, product, category etc... Some global options will be set under the <strong>Options menu</strong> on the right hand menu. Sidebars are often setup using Widgets which can be found as a sub-category in the Options menu. ', 'bamboo' ); ?></p>	
-					
-	</div>
-	
-
-	<div class="dash-col dash-right">
-	
-			<h4><?php _e( 'Asana', 'bamboo' ); ?></h4>
-			<p><?php _e( 'You can follow progress on your site and add your input in Asana. Asana is the project management tool we use. If you want us to address an issue related to your website please create a new task under the Asana project and assign it to us. It\'s what we use instead of email.', 'bamboo' ); ?></p>
-			
-			<h4><?php _e( 'Feedback', 'bamboo' ); ?></h4>
-			<p><?php _e( 'When you are in the Feedback stage of your site build we will show a red Feedback box. This will appear at the bottom of the screen when on the front-facing part of your site. Click on it to load a Feedback Popup. Make notes, highlight sections of the site and then click submit. This will send us a screenshot of the page you are on with your notes - straight into your Asana project. ', 'bamboo' ); ?></p>	
-			
-				
-	</div>
-	
 <div class="woo-sc-divider"></div>	
 	
 <div id="dashboard-rss">
