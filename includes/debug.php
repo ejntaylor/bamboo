@@ -27,4 +27,19 @@ if ( WP_DEBUG ) {
 
 
 
+// Add the following to the wp-config.php file
+
+/**
+ * Bamboo Debug
+ *
+ * If the Bamboo Debug file is required then
+ * - debug is enabled
+ * - log file is outputted to ../WP-Globals/logs/debug.log
+ * 
+ */
+
+// require_once( dirname(__FILE__) . '/wp-content/plugins/bamboo/includes/debug.php');	
+
+
+
 ?>
