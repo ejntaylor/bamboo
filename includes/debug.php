@@ -20,8 +20,8 @@ if ( WP_DEBUG ) {
 
 	// set global mu-plugins directory
 	define( 'WPMU_PLUGIN_DIR', dirname(dirname(ABSPATH)) . '/WP-Globals/mu-plugins' );
-
-	//echo dirname(dirname(ABSPATH)) . '/WP-Globals/mu-plugins';
+	
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	
 }
 

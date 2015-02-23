@@ -158,11 +158,7 @@ require_once('includes/media.php');					// media sizes and upload limits
 require_once('includes/general.php');				// general customisations
 
 function bb_plugins_loaded() {
-	require_once('includes/tools.php');					// admin menu
-	
-	// set debug
-	// global $BambooPlugin;		
-	// if ( $BambooPlugin->get_setting('debug') != "no" && !WP_DEBUG) require_once('includes/debug.php');	
+	require_once('includes/tools.php');				// admin menu
 
 }
 
