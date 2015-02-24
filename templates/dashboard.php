@@ -28,7 +28,7 @@
 				<a href="?page=dashboard" class="nav-tab <?php echo $active_tab == 'welcome'  ? 'nav-tab-active' : ''; ?>">
 				<?php _e( 'Bamboo Status', 'bamboo' ); ?></a>
 				
-				<a href="/?style" target="_blank" class="nav-tab">
+				<a href="/bbstyle/" target="_blank" class="nav-tab">
 				<?php _e( 'Style Page', 'bamboo' ); ?></a>
 
 				<a href="?page=dashboard&tab=tab3" class="nav-tab <?php echo $active_tab == 'tab3'  ? 'nav-tab-active' : ''; ?>">

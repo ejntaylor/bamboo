@@ -1,7 +1,5 @@
 <div class="style-colors">
 
-<h1>Style Guide v 1.3</h1>
-
 
 
 <ul id="style-color-list">
