@@ -2,6 +2,15 @@ Bamboo Lite Change Log
 ======================
 
 
+1.2.10 - 24/02/15
+=================
+
+- Rebuilt Style to work with any theme
+- Style page now access via slug /bbstyle/
+- Style only available for debug
+- Added Debug file for local installs
+
+
 1.2.9 - 09/12
 ==============
 
